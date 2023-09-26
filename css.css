@@ -255,6 +255,7 @@ footer {
     display: none;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+    background-color: gray;
 }
 
 /* 當展開式選單被點擊時，顯示內容 */
