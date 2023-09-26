@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TCG - Rules</title>
+    <link rel="stylesheet" href="css.css" />
+    <link rel="shortcut icon" href="images/web-logo.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Cards</a></li>
+          <li><a href="Rules.html">Rules</a></li>
+          <li><a href="#">Q&A</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="hero">
+        <h1>Rules</h1>
+        <div class="tabs">
+          <button class="tablinks" onclick="openTab(event, 'basic-rules')">
+            Basic Rules
+          </button>
+          <button class="tablinks" onclick="openTab(event, 'detailed-rules')">
+            Detailed Rules
+          </button>
+        </div>
+        <div id="basic-rules" class="tabcontent">
+          <button class="accordion">1. 遊戲準備</button>
+          <div class="panel">
+            <ul>
+              <h3>為了讓遊戲順利進行，您需要準備：</h3>
+              <li>主城建築牌：主城建築牌是遊戲的核心之一，是影響勝負的關鍵</li>
+              <hr />
+              <li>
+                牌組：每副牌組擁有60張牌。每張相同卡名的牌在牌組中只能最多存在3張。<br />
+                <span class="note"
+                  >請注意：您的牌組必須配合您所選擇的主城建築牌。例如若您選擇使用【帝國】勢力的主城建築牌，則您的牌組必須至少擁有30張【帝國】勢力的牌。(將會在稍後解釋)
+                </span>
+              </li>
+              <hr />
+              <li>
+                EX牌組：您可以選擇性地準備EX牌組。若您決定使用EX牌組，則必須將它的數量保持在20張。每張相同卡名的牌在EX牌組中只能最多存在3張。
+              </li>
+              <hr />
+              <li>
+                遊戲配件：您可以選擇性地準備遊戲配件，例如硬幣、卡套、桌墊等。
+              </li>
+            </ul>
+          </div>
+          <hr />
+          <button class="accordion">2. 遊戲開始</button>
+          <div class="panel">
+            <ul>
+              <h3>若您已準備好開始遊戲：</h3>
+              <li>主城建築牌：主城建築牌是遊戲的核心之一，是影響勝負的關鍵</li>
+              <hr />
+              <li>
+                牌組：每副牌組擁有60張牌。每張相同卡名的牌在牌組中只能最多存在3張。<br />
+                <span class="note"
+                  >請注意：您的牌組必須配合您所選擇的主城建築牌。例如若您選擇使用【帝國】勢力的主城建築牌，則您的牌組必須至少擁有30張【帝國】勢力的牌。(將會在稍後解釋)
+                </span>
+              </li>
+              <hr />
+              <li>
+                EX牌組：您可以選擇性地準備EX牌組。若您決定使用EX牌組，則必須將它的數量保持在20張。每張相同卡名的牌在EX牌組中只能最多存在3張。
+              </li>
+              <hr />
+              <li>
+                遊戲配件：您可以選擇性地準備遊戲配件，例如硬幣、卡套、桌墊等。
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="detailed-rules" class="tabcontent">
+          <button class="accordion">Click to view 2 rules</button>
+          <div class="panel">
+            <ul>
+              <li>Each card contains an image, a title, and a description.</li>
+              <li>The image size must be 300x200 pixels.</li>
+              <li>The title must be less than 50 characters.</li>
+              <li>The title must be less than 50 characters.</li>
+              <li>The title must be less than 50 characters.</li>
+              <li>The title must be less than 50 characters.</li>
+              <li>The description must be less than 200 characters.</li>
+              <li>The cards must be arranged in order.</li>
+              <li>Each row can display a maximum of 3 cards.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3><a href="about.html" class="btn">About Us</a></h3>
+          <h3><a href="contact.html" class="btn">Contact Us</a></h3>
+        </div>
+        <div class="footer-section disclaimer">
+          <p>
+            The cards displayed on this website are currently under development
+            and are for reference purposes only. We make no warranties or
+            guarantees regarding the accuracy, completeness, or reliability of
+            any information presented on this website, and we reserve the right
+            to modify the appearance and functionality of these cards at any
+            time without notice.
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 TCG</p>
+      </div>
+    </footer>
+    <button onclick="scrollToTop()" id="scroll-to-top">Top</button>
+    <script>
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          document.getElementById("scroll-to-top").classList.add("show");
+        } else {
+          document.getElementById("scroll-to-top").classList.remove("show");
+        }
+      }
+
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+
+      // 預設顯示基本規則分頁
+      document.getElementById("basic-rules").style.display = "block";
+
+      // 定義打開分頁的函數
+      function openTab(evt, tabName) {
+        // 獲取所有分頁元素
+        var tabcontent = document.getElementsByClassName("tabcontent");
+
+        // 隱藏所有分頁元素
+        for (var i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+
+        // 獲取所有分頁按鈕元素
+        var tablinks = document.getElementsByClassName("tablinks");
+
+        // 取消所有分頁按鈕的 active 狀態
+        for (var i = 0; i < tablinks.length; i++) {
+          tablinks[i].classList.remove("active");
+        }
+
+        // 顯示指定的分頁元素
+        document.getElementById(tabName).style.display = "block";
+
+        // 將指定的分頁按鈕設置為 active 狀態
+        evt.currentTarget.classList.add("active");
+      }
+
+      // 獲取展開式選單元素
+      var acc = document.getElementsByClassName("accordion");
+
+      // 遍歷展開式選單元素，為每個元素添加點擊事件
+      for (var i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          // 切換展開式選單的 active 狀態
+          this.classList.toggle("active");
+
+          // 獲取展開式選單的內容元素
+          var panel = this.nextElementSibling;
+
+          // 切換展開式選單的內容的顯示狀態
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
